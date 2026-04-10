@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>WebPoop GUI</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>WebPoop — GUI</h1>
+
+    <div class="controls">
+      <div class="row">
+        <button id="btnSelectSources">Select Sources</button>
+        <div id="sourcesList" class="smallbox">No sources selected</div>
+      </div>
+
+      <div class="row">
+        <label>Duration (seconds): <input id="duration" type="number" value="60" min="1" /></label>
+        <label>Chaos Level: <input id="chaos" type="range" min="0" max="10" value="6" /></label>
+        <span id="chaosVal">6</span>
+      </div>
+
+      <div class="row">
+        <label>Resolution: <input id="resolution" type="text" value="1280x720" /></label>
+        <label>FPS: <input id="fps" type="number" value="24" min="1" /></label>
+      </div>
+
+      <div class="row">
+        <button id="btnSelectOutput">Select Output</button>
+        <div id="outputPath" class="smallbox">./output/webpoop_gui_*.mp4</div>
+      </div>
+
+      <div class="row">
+        <button id="btnStart">Start Generation</button>
+        <button id="btnOpenFolder" disabled>Open Output Folder</button>
+      </div>
+    </div>
+
+    <h2>Logs</h2>
+    <pre id="log" class="logbox"></pre>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
