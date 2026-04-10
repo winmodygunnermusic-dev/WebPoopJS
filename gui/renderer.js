@@ -74,23 +74,4 @@ btnStart.addEventListener('click', async () => {
   }
 });
 
-btnOpenFolder.addEventListener('click', async () => {
-  if (!selectedOutput) {
-    appendLog('[UI] No output to open');
-    return;
-  }
-  await window.webpoopAPI.openOutputFolder(selectedOutput);
-});
-
-function appendLog(text) {
-  const ts = new Date().toISOString();
-  logBox.textContent += `[${ts}] ${text}\n`;
-  logBox.scrollTop = logBox.scrollHeight;
-}
-
-// receive logs from main
-window.webpoopAPI.onLog((msg) => {
-  if (!msg) return;
-  const level = msg.level || 'info';
-  appendLog(`[${level.toUpperCase()}] ${msg.text}`);
-});
+btnOpenFolder.addEventListener

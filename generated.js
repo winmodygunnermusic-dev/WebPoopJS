@@ -1,7 +1,7 @@
 /**
  * generated.js
  * Generate a 2-minute "poop" video by rendering multiple randomized segments
- * with WebPoop.js and concatenating them into one output.
+ * with WebPoop.js and concatenating them into a single final MP4.
  *
  * Designed for Node 14 (no top-level await), CommonJS, and Windows 8.1 support.
  *
